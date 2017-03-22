@@ -1,0 +1,237 @@
+/*TODO*/
+/*FIX APP POPUP STYLING*/
+
+/*TYPOGRAPHY*/
+
+/* begin regular */
+@font-face {
+  font-family: RobotoDraft;
+  src: url("./fonts/Regular/RobotoDraft-Regular.woff2?v=1.0.0") format("woff2"), url("./fonts/Regular/RobotoDraft-Regular.woff?v=1.0.0") format("woff"), url("./fonts/Regular/RobotoDraft-Regular.ttf?v=1.0.0") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: RobotoDraft;
+  src: url("./fonts/Regular/RobotoDraft-Regular.woff2?v=1.0.0") format("woff2"), url("./fonts/Regular/RobotoDraft-Regular.woff?v=1.0.0") format("woff"), url("./fonts/Regular/RobotoDraft-Regular.ttf?v=1.0.0") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+/* end Regular */
+/* BEGIN Light */
+@font-face {
+  font-family: RobotoDraft;
+  src: url("./fonts/Light/RobotoDraft-Light.woff2?v=1.0.0") format("woff2"), url("./fonts/Light/RobotoDraft-Light.woff?v=1.0.0") format("woff"), url("./fonts/Light/RobotoDraft-Light.ttf?v=1.0.0") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+/* END Light */
+/* begin thin */
+@font-face {
+  font-family: RobotoDraft;
+  src: url("./fonts/Thin/RobotoDraft-Thin.woff2?v=1.0.0") format("woff2"), url("./fonts/Thin/RobotoDraft-Thin.woff?v=1.0.0") format("woff"), url("./fonts/Thin/RobotoDraft-Thin.ttf?v=1.0.0") format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+/* begin thin */
+
+body{
+    font: 300 12px/15px "RobotoDraft", sans-serif;
+    color: #444444;
+    background-color:#F9F9F9;
+}
+
+/*header*/
+h1.app-header{font:300 400%/220% "RobotoDraft"; color:white;}
+
+/*intro paragraph*/
+.app-intro{font:normal 175%/175% "RobotoDraft";
+}
+
+/*single icon*/
+.xicon-icon{
+    color:#757575;
+    font-size: 350%;
+    /*override styling from icomoonstylesheet*/
+    line-height: 0!important;
+    text-align: center;
+}
+.xicon-name{
+    color:#757575;
+    text-align: center;
+    font-size:80%;
+}
+
+/*iconpopup*/
+.app-popup{color:black}
+.popup-icon-name{font-size:130%; font-weight:400;}
+.popup-download{color: black;}
+.popup-icon-glyph, .popup-extpicker-icon, .popup-download{ font-size: 200%;}
+.popup-extpicker-label{font: 400 50% "RobotoDraft", sans-serif;}
+
+/*search*/
+input{font: 300 150% "RobotoDraft", sans-serif;}
+
+
+/*CUSTOM ELEMENTS*/
+icon-app,
+icons-container,
+icon-popup,
+is-png,
+is-svg,
+icon-name,
+x-icon,
+ext-picker,
+x-grid,
+x-banner,
+search-bar,
+icon-glyph,
+icon-name{
+    display:block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*GRID*/
+.app-grid{z-index:-99; position:fixed; top:0;}
+.app-grid-column{ 
+    width: 100px;
+    height: 100vh;
+    float:left;
+    border: 1px solid red; 
+    background: rgba(255,0,0,.2)
+}
+
+
+
+
+
+
+
+
+
+
+/*CUSTOM CLASSES*/
+.hide{
+    display:none;
+}
+.shaded{
+    background-color: #E0E0E0;
+    border-radius:2px; 
+}
+.shadow{
+    width: 200vw;
+    position:absolute;
+    left:0;
+    z-index:-1;
+}
+
+
+
+
+
+
+
+
+
+/*LAYOUT*/
+
+/*body*/
+body{margin:0 0; padding-top:45px; width:100vw; height: 100%;}
+
+/*hero*/
+.app-hero{
+    background-color:#03A9F4; 
+    height: 150px;
+    top:0;
+}
+.app-header{margin:0;}
+
+/*searchbar*/
+.app-searchbar{
+    height:64px;
+    top:150px;
+    background-color:white; 
+    box-shadow: 0px .5px 1px #999999
+}
+input{
+    border:none;
+    margin-top: 21px;
+    margin-bottom: 21px; 
+    outline:none;
+}
+.float{position:fixed!important; top:0!important; z-index:2; }
+.float > .app-searchbar{left:-300px!important; top:0; box-shadow: 0px 2px 2px #999999}
+
+
+
+
+/*intro*/
+.app-intro{margin: 36px 0 36px 0; width:87%;}
+
+/*app*/
+.app{width:1200px; margin: 0 auto}
+
+/*icons*/
+.xicon-container{
+    box-sizing:border-box;
+    width: 7%;
+    height:110px;
+    float:left; 
+    position: relative;
+    margin:20px;
+    margin-bottom: 75px;   
+}
+.xicon-content{
+    position: absolute;               
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);   
+}
+.xicon-name{margin-top:0;}
+
+/*iconpopup*/
+.app-popup{ 
+    padding-left:20px;padding-right:20px;
+    width: 1200px;height:64px;
+    position: fixed;bottom:-75px;
+    display:flex;justify-content: space-around;align-items: center;
+    background-color: #02A8F3; 
+    box-shadow: 0px 0px 9px #99B4B7;
+}
+/*app-popup ==> centering*/
+.popup-download .popup-extpicker .popup-icon-container{height:100%;}
+.popup-extpicker, .popup-download{flex-grow: 1;}
+.popup-icon-container{order:1;flex-grow: 17;}
+.popup-extpicker{order:2;}
+.popup-download{order:3; display:block;}
+/*icon-container ==> centering*/
+.popup-icon-container, .popup-extpicker{display:flex; align-items: center;}
+.popup-icon-glyph{margin-right:20px;}
+.popup-extpicker-icon:nth-child(1){margin-right:25px;}
+.popup-extpicker-icon.icon-radio-unchecked.icon-radio-checked:before {content: "\ea54"!important;}
+.popup-extpicker-label{position:relative; top:15px;right:22px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*iconpopup-animation*/
+.app-popup.ng-hide {animation: hide 0.5s linear;-webkit-animation: hide 0.5s linear;animation-fill-mode: forwards; -webkit-animation-fill-mode:forwards;}
+.app-popup {animation: show 0.5s linear;-webkit-animation: show 0.5s linear;animation-fill-mode: forwards; -webkit-animation-fill-mode:forwards;}
+@keyframes show {from { bottom:-75px; }to { bottom:0; }}
+@keyframes hide {from { bottom:0; }to { bottom:-75px; }}
+@-webkit-keyframes show {from { bottom:-75px; }to { bottom:0; }}
+@-webkit-keyframes hide {from { bottom:0; }to { bottom:-75px; }}

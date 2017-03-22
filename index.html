@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Google Material Design Mock| Angular</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+        <link href="icomoon/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body ng-app="iconApp">
+    
+    
+    <icon-app ng-controller="iconsController" class="app"> 
+        <!--GRID-->
+        <x-grid class="hide app-grid"><div class="app-grid-column"></div><div class="app-grid-column"></div><div class="app-grid-column"></div><div class="app-grid-column"></div><div class="app-grid-column"></div><div class="app-grid-column"></div><div class="app-grid-column"></div><div class="app-grid-column"></div><div class="app-grid-column"></div><div class="app-grid-column"></div><div class="app-grid-column"></div><div class="app-grid-column"></div></x-grid>
+        <!--END GRID-->
+        
+        <!--HERO-->
+        <x-banner class="shadow app-hero"></x-banner>
+        <h1 class="app-header">Material Icons</h1>
+        <!--END HERO-->
+        
+        <!--SEARCH-->
+        <div search class="srch"></div>
+        <!--END SEARCH-->
+        
+        <!--INTRO-->
+        <aside class="app-intro">Welcome to my Icon App built with Angular JS! This is modeled after the Google Material Icon page. I built an application similar to this at Yahoo!It includes custom directives and unit tests. To manage my scopes I used Google Chrome's Batarang. Click on an icon and use the dynamic download feature. </aside>
+        <!--END INTRO-->
+        
+        <!--ICONS-->
+        <icons-container class="xicons-container">
+            <div single-icon></div>
+        </icons-container>
+        <!--END ICONS-->
+        
+        <!--POPUP-->
+        <div popup></div>
+        <!--END POPUP-->
+    </icon-app>
+    
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+            
+            
+    </body>
+</html>
